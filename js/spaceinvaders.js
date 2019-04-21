@@ -134,6 +134,7 @@ function GameLoop(game) {
         var updateDrawTime = 1 / game.config.fps;
 
         //  Get the drawing context.
+        if(this.gameCanvas)
         var currentContext = this.gameCanvas.getContext("2d");
         
         //  Update if we have an update function.
@@ -644,6 +645,7 @@ PlayState.prototype.keyDown = function (game, keyCode) {
     if (keyCode == KEY_PAUSE) {
         //  Push the pause state.
         var field = document.getElementById('gamecontainer');
+        field.style.zIndex = 3;
         html = field.innerHTML;
         field.innerHTML="<h1 style='margin-top:25%'>Paused</h1><button id='quit' name='submit'"+"style='border: none;outline: none;height: 45px;"+
         "background:#696969;color: #fff;font-size: 25px;border-radius: 20px;'"+">Quit Game</button>";
@@ -678,6 +680,7 @@ PauseState.prototype.keyDown = function (game, keyCode) {
     if (keyCode == KEY_PAUSE) {
         //  Pop the pause state.
         var field = document.getElementById('gamecontainer');
+        field.style.zIndex = -1;
         field.innerHTML=html;
         game.popState();
     }
@@ -686,6 +689,7 @@ PauseState.prototype.keyDown = function (game, keyCode) {
 PauseState.prototype.draw = function(game, updateTime, contextConvas) {
 
     // Clear the background.
+    if(contextConvas){
     contextConvas.clearRect(0, 0, game.width, game.height);
 
     contextConvas.font="14px Arial";
@@ -694,6 +698,7 @@ PauseState.prototype.draw = function(game, updateTime, contextConvas) {
     contextConvas.textAlign="center";
     contextConvas.fillText("Paused", game.width / 2, game.height/2);
     return;
+    }
 };
 
 /*  
