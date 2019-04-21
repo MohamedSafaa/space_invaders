@@ -1,0 +1,61 @@
+body{
+    overflow: hidden;
+}
+
+h1{
+    text-align: center;
+    letter-spacing: 20px;
+    margin-top: 75px;
+    color: #83b768;
+}
+
+.credits{
+    margin: 25px auto;
+    margin-bottom: 50px;
+    text-align: center;
+    border: 2px solid #282852;
+    border-radius: 30px;
+    width: 500px;
+    background: #191738bd;
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    font-family: "Comic Sans MS";
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.credits p{
+    border: 1px solid #010b2f;
+    background: #009dcc;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 15px;
+}
+
+
+
+.back{
+    padding: 10px;
+	border-radius: 25px;
+    color:#a5c792;
+    letter-spacing: 5px;
+	width: 200px;
+	background-color: #010b2f;
+	border: 2px solid #02155d;
+	font-size: 20px;
+    margin-left: 570px;
+    outline: none;
+    margin-top: -100px; 
+}
+
+.back:hover{
+    cursor: pointer;
+    background-color: #010b3f;
+}
+
+.back:active{
+    width: 198px;
+}
+
+

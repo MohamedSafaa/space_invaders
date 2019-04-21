@@ -1,0 +1,82 @@
+
+
+h1, form, img{
+    opacity: 1;
+}
+
+.log{
+    width: 350px;
+    height: 400px;
+    color: #fff;
+    background: rgb(0,0,0,.5);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    opacity: .8;
+}
+.small{
+     width: 100px;
+     height: 100px;
+     border-radius:50%; 
+     position: absolute;
+     
+     top: calc(-100px/2);
+     left: calc(50% - 50px);
+     overflow: hidden;
+
+
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 24px;
+    color: #efed40;
+}
+.log p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+
+.log input{
+    width: 102%;
+    margin-bottom: 56px;
+}
+.log input[type ="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+
+}
+::placeholder
+{
+    color: rgb(255, 255, 225,.5);
+}
+.log input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #0816e6;
+    color: #fff;
+    font-size: 25px;
+    border-radius: 20px;
+    font-family: inherit;
+}
+.log input[type="submit"]:hover
+{
+cursor: pointer;
+background: #40eb0c;
+color: #f1e7e7;
+
+
+}
